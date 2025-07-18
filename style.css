@@ -1,0 +1,370 @@
+/* Google Fonts loaded separately in HTML */
+
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('images/deep-space.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.5s ease;
+  line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 30, 0.6);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Light mode */
+body.light-mode {
+  background-color: #f0f0f5;
+  color: #222;
+}
+
+body.light-mode::before {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Header & nav */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 20, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-family: 'Cinzel', serif;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+body.light-mode header {
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #f39c12;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #f0e6d2;
+  text-shadow: 0 0 6px #222;
+}
+
+.hero .btn {
+  background: #f39c12;
+  color: #111;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: 0 0 10px #f39c12;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.hero .btn:hover {
+  background: #d17d0e;
+  box-shadow: 0 0 15px #d17d0e;
+}
+
+/* Sections common */
+section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Daily Horoscope */
+#horoscope-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 1.5rem;
+}
+
+.horoscope-card {
+  background: rgba(30, 30, 60, 0.8);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #f39c12aa;
+  transition: transform 0.3s ease;
+}
+
+.horoscope-card:hover {
+  transform: translateY(-5px);
+}
+
+.horoscope-card h3 {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0.5rem;
+  color: #f39c12;
+}
+
+.horoscope-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+/* Zodiac Grid */
+#zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 1rem;
+}
+
+.zodiac-card {
+  background: rgba(30, 30, 60, 0.8);
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #3498dbaa;
+  transition: box-shadow 0.3s ease;
+  color: #eee;
+  font-family: 'Cinzel', serif;
+}
+
+.zodiac-card:hover {
+  box-shadow: 0 0 15px #f39c12cc;
+}
+
+/* Birth Chart */
+#birth-chart-form {
+  max-width: 400px;
+  margin: auto;
+  background: rgba(20,20,40,0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #8e44adcc;
+  color: #ddd;
+}
+
+#birth-chart-form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+#birth-chart-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+#birth-chart-form button {
+  background: #8e44ad;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #8e44adaa;
+  transition: background 0.3s ease;
+}
+
+#birth-chart-form button:hover {
+  background: #6c3483;
+}
+
+/* Birth chart result */
+#birth-chart-result {
+  margin-top: 1rem;
+  background: rgba(40,40,70,0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  color: #eee;
+  font-family: 'Cinzel', serif;
+}
+
+/* Blog */
+#blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 1.5rem;
+}
+
+.blog-card {
+  background: rgba(20, 20, 50, 0.85);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 12px #2980b9aa;
+  transition: transform 0.3s ease;
+  color: #eee;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0.25rem;
+  color: #f39c12;
+}
+
+.blog-card small {
+  color: #bbb;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.blog-card p {
+  margin-bottom: 1rem;
+}
+
+.blog-card .btn {
+  background: #2980b9;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 0 10px #2980b9aa;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.blog-card .btn:hover {
+  background: #1f618d;
+}
+
+/* Contact */
+#contact-form {
+  max-width: 400px;
+  margin: auto;
+  background: rgba(10,10,30,0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #34495e99;
+  color: #ddd;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+  resize: vertical;
+}
+
+#contact-form button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #27ae6099;
+  transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+  background: #1e8449;
+}
+
+/* Footer */
+footer {
+  background: rgba(10, 10, 30, 0.85);
+  color: #bbb;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #f39c12;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+  #horoscope-container,
+  #zodiac-grid,
+  #blog-container {
+    grid-template-columns: 1fr;
+  }
+  #birth-chart-form,
+  #contact-form {
+    padding: 1rem;
+  }
+}

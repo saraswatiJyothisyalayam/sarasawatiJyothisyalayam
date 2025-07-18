@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="రోజువారీ జ్యోతిష్యశాస్త్ర వివరాలు, రాశి చిహ్నాలు, జన్మ చార్ట్ లెక్కింపులు మరియు మరెన్నో విషయాలతో మీ నక్షత్రాలను కనుగొనండి." />
+  <meta name="keywords" content="జ్యోతిష్యశాస్త్రం, రాశిఫలం, రాశి చిహ్నాలు, జన్మ చార్ట్, రోజువారీ రాశిఫలం" />
+  <title>మీ నక్షత్రాలను కనుగొనండి - జ్యోతిష్య వెబ్ సైట్</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">✨ మీ నక్షత్రాలను కనుగొనండి</div>
+  <nav>
+    <a href="#home">హోమ్</a>
+    <a href="#daily-horoscope">రోజువారీ రాశి ఫలం</a>
+    <a href="#zodiac-signs">రాశి చిహ్నాలు</a>
+    <a href="#birth-chart">జన్మ చార్ట్</a>
+    <a href="#blog">బ్లాగ్</a>
+    <a href="#contact">సంప్రదించండి</a>
+    <button id="theme-toggle" aria-label="కాంతి/చీకటి మోడ్ మార్చండి"><i class="fas fa-moon"></i></button>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <h1>మీ నక్షత్రాలను కనుగొనండి – రోజువారీ జ్యోతిష్య అవగాహన</h1>
+  <p>వ్యక్తిగత జ్యోతిష్య పాఠాలు, రాశి లక్షణాలు మరియు మరికొన్ని అంశాలతో మీ భవిష్యత్తు మరియు వ్యక్తిత్వ రహస్యాలను అన్వేషించండి.</p>
+  <a href="#daily-horoscope" class="btn">మీ ఉచిత రాశి ఫలం పొందండి</a>
+</section>
+
+<section id="daily-horoscope">
+  <h2>రోజువారీ రాశి ఫలం</h2>
+  <input type="date" id="horoscope-date" max="" />
+  <div id="horoscope-container"></div>
+</section>
+
+<section id="zodiac-signs">
+  <h2>రాశి చిహ్నాలు</h2>
+  <div id="zodiac-grid"></div>
+</section>
+
+<section id="birth-chart">
+  <h2>జన్మ చార్ట్ లెక్కింపు</h2>
+  <form id="birth-chart-form">
+    <label for="name">పేరు:</label>
+    <input id="name" type="text" required />
+    
+    <label for="birthdate">పుట్టిన తేదీ:</label>
+    <input id="birthdate" type="date" required />
+    
+    <label for="birthtime">పుట్టిన సమయం:</label>
+    <input id="birthtime" type="time" required />
+    
+    <label for="birthplace">పుట్టిన ప్రదేశం:</label>
+    <input id="birthplace" type="text" required />
+    
+    <button type="submit">లెక్కించండి</button>
+  </form>
+  <div id="birth-chart-result"></div>
+</section>
+
+<section id="blog">
+  <h2>జ్యోతిష్య బ్లాగ్</h2>
+  <div id="blog-container"></div>
+</section>
+
+<section id="contact">
+  <h2>మమ్మల్ని సంప్రదించండి</h2>
+  <form id="contact-form" novalidate>
+    <label for="contact-name">పేరు:</label>
+    <input id="contact-name" type="text" required />
+    
+    <label for="contact-email">ఈమెయిల్:</label>
+    <input id="contact-email" type="email" required />
+    
+    <label for="contact-message">సందేశం:</label>
+    <textarea id="contact-message" rows="4" required></textarea>
+    
+    <button type="submit">సందేశం పంపండి</button>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <p>©️ 2025 మీ నక్షత్రాలను కనుగొనండి. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.</p>
+  <p>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </p>
+  <p>
+    <a href="#home">హోమ్</a> | 
+    <a href="#daily-horoscope">రోజువారీ రాశి ఫలం</a> | 
+    <a href="#zodiac-signs">రాశి చిహ్నాలు</a> | 
+    <a href="#birth-chart">జన్మ చార్ట్</a> | 
+    <a href="#blog">బ్లాగ్</a> | 
+    <a href="#contact">సంప్రదించండి</a>
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
